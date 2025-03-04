@@ -68,8 +68,8 @@ section:hover {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 30px;
-    color: #FFD700;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
+    color: black;
+    text-shadow: 2px 2px 10px black;
 }
 
 /* 💎 Skills Grid */
@@ -107,7 +107,7 @@ section:hover {
 /* 🏆 Icons */
 .skill-card i {
     font-size: 50px;
-    color: #FFD700;
+    color: black;
     margin-bottom: 10px;
     transition: color 0.3s;
 }
