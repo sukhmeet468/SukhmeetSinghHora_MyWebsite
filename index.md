@@ -6,11 +6,39 @@ title: Sukhmeet Singh Hora
 # 👋 About Me
 **Proactive Computer Engineering student** with strong communication skills and technical expertise.
 
-# 💼 Experience
-- **Engineering Project Coordinator - New Flyer**  
-  Developed automation tools and project tracking systems.
-- **Engineering Aide - Indus Automation**  
-  Designed IoT-based control systems with AWS integration.
+## 💼 Experience  
+
+<div class="experience-section">
+
+<div class="experience-card">
+    <div class="experience-title">Engineering Project Coordinator – New Flyer</div>
+    <div class="experience-desc">
+        • Participated in project management process improvements.  
+        • Developed automated tools for tracking, forecasting, and budget analysis.  
+        • Engineered an automated BoM system, improving part tracking accuracy.  
+        • Learned CAN protocol, J1939, and advanced vehicle networks.  
+    </div>
+</div>
+
+<div class="experience-card">
+    <div class="experience-title">Engineering Aide – Indus Automation</div>
+    <div class="experience-desc">
+        • Designed and implemented a smartphone app to manage PLC systems.  
+        • Integrated AWS for secure remote monitoring of lift stations.  
+        • Automated SharePoint project tracking with Excel VBA Macros.  
+    </div>
+</div>
+
+<div class="experience-card">
+    <div class="experience-title">STEP - Web Developer/Business Analyst</div>
+    <div class="experience-desc">
+        • Built a SharePoint collaboration site & interactive HTML pages.  
+        • Automated SQL extracts and supported data analysis for reports.  
+        • Created system manuals & assisted in testing applications.  
+    </div>
+</div>
+
+</div>
 
 # 🚀 Transferable Skills
 - **Web Development & Automation:** Experienced in VBA, PHP, and SharePoint to automate workflows and improve efficiency.  
@@ -34,7 +62,7 @@ Designed and implemented a smartphone application to remotely interface with, co
 
 ---
 
-### 🌊 **Capstone Project (In Progress)**
+### 🌊 **Capstone Project**
 Developing an **IoT-based Lake/River Depth Measurement and Monitoring System** using sonar technology and cloud integration for **real-time depth monitoring, GPS navigation, path mapping, and ML-based hazard differentiation**.  
 
 🎥 **Demo Video Placeholder**  
@@ -42,7 +70,7 @@ Developing an **IoT-based Lake/River Depth Measurement and Monitoring System** u
 
 ---
 
-### 💼 **Full Stack Career Platform (In Progress)**
+### 💼 **Full Stack Career Platform**
 Developing a **career platform** with a job portal, recommendation engine, and live quizzing event using **MERN Stack, CI/CD pipelines, Docker containerization, security analysis, and load testing**.  
 
 🎥 **Demo Video Placeholder**  
@@ -90,22 +118,18 @@ Designed and implemented a **database system** encapsulating **albums, artists, 
 
 # 📄 Resume
 
-📥 **Download my Resume**  
-[![Download Resume](https://img.shields.io/badge/Download-Resume-blue?style=for-the-badge&logo=adobeacrobatreader)](Sukhmeet_Singh_Hora_Resume.pdf){:target="_blank"}
-
 💼 **View Online**  
 [Click here](Sukhmeet_Singh_Hora_Resume.pdf){:target="_blank"} to view my resume in your browser.
 
 ---
-
 ## 🎮 Click & Reveal Game  
 Click on a box to learn something about me!  
 
 <div class="game-container">
-    <div class="box"><span>❓</span></div>
-    <div class="box"><span>❓</span></div>
-    <div class="box"><span>❓</span></div>
-    <div class="box"><span>❓</span></div>
+    <div class="box" onclick="revealFact(this)">❓</div>
+    <div class="box" onclick="revealFact(this)">❓</div>
+    <div class="box" onclick="revealFact(this)">❓</div>
+    <div class="box" onclick="revealFact(this)">❓</div>
 </div>
 
 <button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
@@ -123,29 +147,21 @@ document.addEventListener("DOMContentLoaded", function () {
         "📡 MQTT and PLC programming are part of my expertise."
     ];
 
-    function revealFact(box) {
+    window.revealFact = function (box) {
         const randomIndex = Math.floor(Math.random() * facts.length);
-        box.innerHTML = `<span>${facts[randomIndex]}</span>`;
+        box.innerHTML = facts[randomIndex];
         box.style.backgroundColor = "#28a745"; // Change color after reveal
         box.style.color = "white"; // Keep text readable
         box.classList.add("fade-in"); // Apply fade-in animation
-    }
+    };
 
-    function resetGame() {
+    window.resetGame = function () {
         document.querySelectorAll(".box").forEach((box) => {
-            box.innerHTML = "<span>❓</span>";
+            box.innerHTML = "❓";
             box.style.backgroundColor = "#007BFF"; // Reset color
             box.classList.remove("fade-in"); // Remove animation class
         });
-    }
-
-    document.querySelectorAll(".box").forEach((box) => {
-        box.addEventListener("click", function () {
-            revealFact(this);
-        });
-    });
-
-    window.resetGame = resetGame;
+    };
 });
 </script>
 
