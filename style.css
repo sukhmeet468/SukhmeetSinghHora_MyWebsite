@@ -116,7 +116,6 @@ section:hover {
 /* ✨ Hover Effect */
 .skill-card:hover {
     transform: scale(1.15);
-    box-shadow: 0px 6px 25px rgba(255, 215, 0, 0.7); /* Stronger glow */
     background: rgba(255, 255, 255, 0.8); /* Very light background */
 }
 
