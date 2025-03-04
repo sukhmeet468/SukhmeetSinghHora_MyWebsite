@@ -2,8 +2,8 @@
  
  
 { 
-"title"    : "ABOUT ME", 
-"desc"     : "ABOUT ME", 
+"title"    : "", 
+"desc"     : "", 
 "category" : "page", 
 "url"      : "/", 
 "date"     : "January 1, 1970" 
