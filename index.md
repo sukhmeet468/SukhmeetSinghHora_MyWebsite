@@ -6,7 +6,7 @@ cover-img: "/assets/img/cover.jpg"
 <!-- Profile Card in Header -->
 <header>
     <div class="profile-card">
-        <img src="/assets/img/profile.jpeg">
+        <img src="assets/img/profile.jpeg">
         <h2>Sukhmeet Singh Hora</h2>
         <p>Computer Engineer Graduating May 2025</p>
         <p>Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA & Macros Automation</p>
