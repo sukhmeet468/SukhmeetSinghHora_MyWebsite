@@ -21,14 +21,6 @@ title: Sukhmeet Singh Hora
 - **Embedded Systems & IoT:** Experienced with PLC (S7-1200/1500), IoT2050, STM32, and Raspberry Pi, integrating hardware with cloud-based applications. Developed IoT apps using MQTT for real-time communication and AWS IoT solutions for secure remote monitoring and automation.  
 - **Problem-Solving & Innovation:** Designed and developed automated tools, predictive models, and workflow optimizations to enhance engineering and software processes. 
 
-# 📄 Resume
-
-📥 **Download my Resume**  
-[![Download Resume](https://img.shields.io/badge/Download-Resume-blue?style=for-the-badge&logo=adobeacrobatreader)](Sukhmeet_Singh_Hora_Resume.pdf)
-
-💼 **View Online**  
-[Click here](Sukhmeet_Singh_Hora_Resume.pdf) to view my resume in your browser.
-
 # 📂 Projects
 
 ### 📱 **PLC Remote Interface App**
@@ -96,16 +88,66 @@ Designed and implemented a **database system** encapsulating **albums, artists, 
 
 ---
 
+# 📄 Resume
+
+📥 **Download my Resume**  
+[![Download Resume](https://img.shields.io/badge/Download-Resume-blue?style=for-the-badge&logo=adobeacrobatreader)](Sukhmeet_Singh_Hora_Resume.pdf){:target="_blank"}
+
+💼 **View Online**  
+[Click here](Sukhmeet_Singh_Hora_Resume.pdf){:target="_blank"} to view my resume in your browser.
+
+---
+
 ## 🎮 Click & Reveal Game  
 Click on a box to learn something about me!  
 
 <div class="game-container">
-    <div class="box" onclick="revealFact(this)"><span>❓</span></div>
-    <div class="box" onclick="revealFact(this)"><span>❓</span></div>
-    <div class="box" onclick="revealFact(this)"><span>❓</span></div>
-    <div class="box" onclick="revealFact(this)"><span>❓</span></div>
+    <div class="box"><span>❓</span></div>
+    <div class="box"><span>❓</span></div>
+    <div class="box"><span>❓</span></div>
+    <div class="box"><span>❓</span></div>
 </div>
 
+<button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const facts = [
+        "💻 I love Full-Stack Development with MERN!",
+        "🔬 I worked on an IoT-based depth monitoring system.",
+        "🌍 I enjoy solving real-world engineering problems.",
+        "🎨 I created a cross-platform app for pump management!",
+        "🚀 I'm skilled in automation using VBA and Power BI!",
+        "📊 Data visualization is my superpower!",
+        "🤖 I built a project using Raspberry Pi and AWS IoT!",
+        "📡 MQTT and PLC programming are part of my expertise."
+    ];
+
+    function revealFact(box) {
+        const randomIndex = Math.floor(Math.random() * facts.length);
+        box.innerHTML = `<span>${facts[randomIndex]}</span>`;
+        box.style.backgroundColor = "#28a745"; // Change color after reveal
+        box.style.color = "white"; // Keep text readable
+        box.classList.add("fade-in"); // Apply fade-in animation
+    }
+
+    function resetGame() {
+        document.querySelectorAll(".box").forEach((box) => {
+            box.innerHTML = "<span>❓</span>";
+            box.style.backgroundColor = "#007BFF"; // Reset color
+            box.classList.remove("fade-in"); // Remove animation class
+        });
+    }
+
+    document.querySelectorAll(".box").forEach((box) => {
+        box.addEventListener("click", function () {
+            revealFact(this);
+        });
+    });
+
+    window.resetGame = resetGame;
+});
+</script>
 
 # 📞 Contact
 - 📧 [Email Me](mailto:horass@myumanitoba.ca)  
