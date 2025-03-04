@@ -1,3 +1,13 @@
+top_skills:
+  - Internet of Things (IoT)
+  - Amazon Web Services (AWS)
+  - Embedded Software Programming
+  - Artificial Intelligence (AI)
+  - Full Stack Development (MERN)
+  - MQTT (protocol)
+  - Automation Scripts (Macros, VBA)
+  - Database Management (SQL)
+  - GitHub
 remote_theme: daattali/beautiful-jekyll
 title: "Sukhmeet Singh Hora"
 description: "Welcome to my portfolio website!"
@@ -5,4 +15,4 @@ author: "Sukhmeet Singh Hora"
 theme_skin: "dark"  # or choose "light"
 social-network-links:
   linkedin: sukhmeet-hora
-  github: your-github-username
+  github: sukhmeet468
