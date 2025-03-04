@@ -1,4 +1,8 @@
+remote_theme: daattali/beautiful-jekyll
 title: "Sukhmeet Singh Hora"
 description: "Welcome to my portfolio website!"
-theme: jekyll-theme-minimal
-show_downloads: false
+author: "Sukhmeet Singh Hora"
+theme_skin: "dark"  # or choose "light"
+social-network-links:
+  linkedin: sukhmeet-hora
+  github: your-github-username
