@@ -1,7 +1,12 @@
+---
+layout: home
+cover-img: "/assets/img/cover.jpg"
+---
+
 <!-- Profile Card in Header -->
 <header>
     <div class="profile-card">
-        <img src="/assets/img/profile.jpg" alt="Sukhmeet Singh Hora">
+        <img src="/assets/img/profile.jpg">
         <h2>Sukhmeet Singh Hora</h2>
         <p>Computer Engineer Graduating May 2025</p>
         <p>Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA & Macros Automation</p>
@@ -15,7 +20,7 @@ Proactive and goal-oriented Computer Engineering student with strong communicati
 
 ---
 
-💼 **Currently:**  
+💼 **Currently**:  
 - Computer Engineering Co-op Student at UoM Graduating May 2025
 - Engineering Project Coordinator Co-op Student at **New Flyer**    
 
