@@ -16,6 +16,8 @@ header {
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
+    position: relative; /* Added so the button can be positioned inside the header */
+    margin-top: 30px;
 }
 
 /* ✨ Navigation */
@@ -459,4 +461,70 @@ main {
     main {
         margin-left: 80px;
     }
+}
+
+/* Style for the MENU button inside the header */
+.menu-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute; /* Position it absolutely inside the header */
+    left: 20px; /* Adjust the left position of the button */
+    top: 50%; /* Vertically center it in the header */
+    transform: translateY(-50%); /* Adjust the position to center vertically */
+}
+
+.menu-btn:hover {
+    background-color: transparent;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px; /* Adjust top position */
+    left: 10px; /* Adjust left position */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Make the profile sticky at the top */
+.sticky-profile {
+    position: sticky;
+    top: 0;
+    z-index: 20;  /* Make sure it stays on top of other content */
+    padding: 20px;
 }

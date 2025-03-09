@@ -18,7 +18,7 @@
   <meta name="author" content="Sukhmeet Singh Hora">
   
 
-  <meta name="description" content="{% include profile.html %} {% include sidebar.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
+  <meta name="description" content="{% include menu.html %} {% include profile.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
 
   
 
@@ -80,7 +80,7 @@
   
   <meta property="og:site_name" content="Sukhmeet Singh Hora">
   <meta property="og:title" content="Sukhmeet Singh Hora">
-  <meta property="og:description" content="{% include profile.html %} {% include sidebar.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
+  <meta property="og:description" content="{% include menu.html %} {% include profile.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
 
   
   <meta property="og:image" content="http://localhost:4000/assets/img/cover.jpg">
@@ -99,7 +99,7 @@
   <meta name="twitter:creator" content="@">
 
   <meta property="twitter:title" content="Sukhmeet Singh Hora">
-  <meta property="twitter:description" content="{% include profile.html %} {% include sidebar.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
+  <meta property="twitter:description" content="{% include menu.html %} {% include profile.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
 
   
   <meta name="twitter:image" content="http://localhost:4000/assets/img/cover.jpg">
@@ -186,28 +186,54 @@
 
       <link rel="stylesheet" href="style.css" />
 
+<!-- Profile Section that should always be displayed at the top -->
+<div class="sticky-profile">
+    <header>
+    <!-- Dropdown Menu Button -->
+    <button class="menu-btn">☰ Menu</button>
+
+    <!-- Dropdown Menu -->
+    <nav class="dropdown-menu" style="display: none;">
+        <ul>
+            <li><a href="#about" class="menu-item">👋 About Me</a></li>
+            <li><a href="#skills" class="menu-item">💡 Top Skills</a></li>
+            <li><a href="#education" class="menu-item">🎓 Education &amp; Certifications</a></li>
+            <li><a href="#experience" class="menu-item">💼 Experience</a></li>
+            <li><a href="#projects" class="menu-item">📂 Projects</a></li>
+            <li><a href="#game" class="menu-item">🎮 Click and Reveal Game</a></li>
+            <li><a href="#contact" class="menu-item">📞 Contact</a></li>
+        </ul>
+    </nav>
+</header>
+</div>
 <!-- Profile Card in Header -->
 <header>
     <div class="profile-card">
-        <img src="assets/img/profile.jpeg" />
+        <img src="assets/img/profile.jpeg" alt="Profile Picture" />
         <h2>Sukhmeet Singh Hora</h2>
         <p>Computer Engineer Graduating May 2025</p>
         <p>Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA &amp; Macros Automation</p>
     </div>
 </header>
 
-<!-- Left Sidebar Navigation -->
-<nav class="sidebar">
-    <ul>
-        <li><a href="#about">👋 About Me</a></li>
-        <li><a href="#skills">💡 Top Skills</a></li>
-        <li><a href="#education">🎓 Education &amp; Certifications</a></li>
-        <li><a href="#experience">💼 Experience</a></li>
-        <li><a href="#projects">📂 Projects</a></li>
-        <li><a href="#game">🎓 Click and Reveal Game</a></li>
-        <li><a href="#contact">📞 Contact</a></li>
-    </ul>
-</nav>
+<script>
+    // JavaScript to toggle the dropdown menu
+    const menuButton = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.dropdown-menu');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Toggle the dropdown menu when the "MENU" button is clicked
+    menuButton.addEventListener('click', function() {
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close the dropdown menu when any menu item is clicked
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            menu.style.display = 'none'; // Close the menu
+        });
+    });
+</script>
 
 <h2 id="--about-me"><a id="about"></a> 👋 About Me</h2>
 <p>Proactive and goal-oriented Computer Engineering student with strong communication skills and a solid foundation 

@@ -5,9 +5,11 @@ cover-img: "/assets/img/cover.jpg"
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Profile Section that should always be displayed at the top -->
+<div class="sticky-profile">
+    {% include menu.html %}
+</div>
 {% include profile.html %}
-
-{% include sidebar.html %}
 
 ## <a id="about"></a> 👋 About Me  
 {% include about.html %}

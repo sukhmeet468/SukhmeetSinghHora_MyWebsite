@@ -1,9 +1,28 @@
 <!-- Profile Card in Header -->
 <header>
     <div class="profile-card">
-        <img src="assets/img/profile.jpeg">
+        <img src="assets/img/profile.jpeg" alt="Profile Picture">
         <h2>Sukhmeet Singh Hora</h2>
         <p>Computer Engineer Graduating May 2025</p>
         <p>Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA & Macros Automation</p>
     </div>
 </header>
+
+<script>
+    // JavaScript to toggle the dropdown menu
+    const menuButton = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.dropdown-menu');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Toggle the dropdown menu when the "MENU" button is clicked
+    menuButton.addEventListener('click', function() {
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close the dropdown menu when any menu item is clicked
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            menu.style.display = 'none'; // Close the menu
+        });
+    });
+</script>
