@@ -340,3 +340,123 @@ video {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* 📚 Education Section */
+.education-section {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🏫 Education Card */
+.education-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+/* 📜 Certification Cards */
+.cert-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.3);
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+/* 🎓 Section Titles */
+h2, h3 {
+    color: #FFD700; /* Gold */
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+}
+
+/* 📄 Certificate Button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #FFD700, #FF8C00);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* 🏗️ Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px; /* Push sidebar below header */
+    height: calc(100% - 60px); /* Adjust height */
+    width: 250px;
+    background: linear-gradient(135deg, #1E1E2F, #2E3B55);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 📋 Sidebar Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #FFD700; /* Gold */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+/* 🚀 Push Main Content to Right */
+main {
+    margin-left: 270px; /* Adjust according to sidebar width */
+    padding: 20px;
+}
+
+/* 📱 Responsive Sidebar (for mobile) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        padding: 10px;
+        top: 0px; /* Align properly on mobile */
+    }
+
+    .sidebar ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    main {
+        margin-left: 80px;
+    }
+}

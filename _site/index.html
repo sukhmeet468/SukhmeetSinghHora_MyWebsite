@@ -18,7 +18,7 @@
   <meta name="author" content="Sukhmeet Singh Hora">
   
 
-  <meta name="description" content="Sukhmeet Singh Hora Computer Engineer Graduating May 2025 Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA &amp; Macros Automation ## 👋 About Me Proactive and goal-oriented Computer Engineering student with strong communication skills and a solid foundation in technical and software...">
+  <meta name="description" content="{% include profile.html %} {% include sidebar.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
 
   
 
@@ -80,7 +80,7 @@
   
   <meta property="og:site_name" content="Sukhmeet Singh Hora">
   <meta property="og:title" content="Sukhmeet Singh Hora">
-  <meta property="og:description" content="Sukhmeet Singh Hora Computer Engineer Graduating May 2025 Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA &amp; Macros Automation ## 👋 About Me Proactive and goal-oriented Computer Engineering student with strong communication skills and a solid foundation in technical and software...">
+  <meta property="og:description" content="{% include profile.html %} {% include sidebar.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
 
   
   <meta property="og:image" content="http://localhost:4000/assets/img/cover.jpg">
@@ -99,7 +99,7 @@
   <meta name="twitter:creator" content="@">
 
   <meta property="twitter:title" content="Sukhmeet Singh Hora">
-  <meta property="twitter:description" content="Sukhmeet Singh Hora Computer Engineer Graduating May 2025 Embedded Software Programming | Internet of Things | Full Stack Development | Amazon Web Services | VBA &amp; Macros Automation ## 👋 About Me Proactive and goal-oriented Computer Engineering student with strong communication skills and a solid foundation in technical and software...">
+  <meta property="twitter:description" content="{% include profile.html %} {% include sidebar.html %} ## 👋 About Me {% include about.html %} ## 💡 Top Skills {% include topskills.html %} ## 🎓 Education &amp; Certifications {% include educ_certs.html %} ## 💼 Experience {% include experience.html %} ## 📂 Projects {% include projects.html %} ## 📄 Resume...">
 
   
   <meta name="twitter:image" content="http://localhost:4000/assets/img/cover.jpg">
@@ -184,7 +184,9 @@
     <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       
 
-      <!-- Profile Card in Header -->
+      <link rel="stylesheet" href="style.css" />
+
+<!-- Profile Card in Header -->
 <header>
     <div class="profile-card">
         <img src="assets/img/profile.jpeg" />
@@ -194,10 +196,25 @@
     </div>
 </header>
 
-<link rel="stylesheet" href="style.css" />
+<!-- Left Sidebar Navigation -->
+<nav class="sidebar">
+    <ul>
+        <li><a href="#about">👋 About Me</a></li>
+        <li><a href="#skills">💡 Top Skills</a></li>
+        <li><a href="#education">🎓 Education &amp; Certifications</a></li>
+        <li><a href="#experience">💼 Experience</a></li>
+        <li><a href="#projects">📂 Projects</a></li>
+        <li><a href="#game">🎓 Click and Reveal Game</a></li>
+        <li><a href="#contact">📞 Contact</a></li>
+    </ul>
+</nav>
 
-<h2 id="-about-me">👋 About Me</h2>
-<p>Proactive and goal-oriented Computer Engineering student with strong communication skills and a solid foundation in technical and software development. I have gained hands-on engineering experience through both academic projects and professional roles, including my time as an Engineering Intern at Indus Automation and as a Web Developer &amp; Analyst at Manitoba Municipal Relations. Passionate about leveraging my expertise in IoT, Full-Stack Development, AWS, VBA Macros, and Design Solution Programming to develop innovative and efficient solutions for real-world challenges.</p>
+<h2 id="--about-me"><a id="about"></a> 👋 About Me</h2>
+<p>Proactive and goal-oriented Computer Engineering student with strong communication skills and a solid foundation 
+in technical and software development. I have gained hands-on engineering experience through both academic projects 
+and professional roles, including my time as an Engineering Intern at Indus Automation and as a Web Developer &amp; Analyst 
+at Manitoba Municipal Relations. Passionate about leveraging my expertise in IoT, Full-Stack Development, AWS, VBA Macros,
+and Design Solution Programming to develop innovative and efficient solutions for real-world challenges.</p>
 
 <hr />
 
@@ -209,6 +226,7 @@
 
 <hr />
 
+<h2 id="--top-skills"><a id="skills"></a> 💡 Top Skills</h2>
 <section class="skills-section">
     <h2>Top Skills</h2>
     <div class="skills-container">
@@ -255,10 +273,53 @@
     </div>
 </section>
 
-<hr />
+<h2 id="--education--certifications"><a id="education"></a> 🎓 Education &amp; Certifications</h2>
+<section class="education-section">
 
-<h2 id="-experience">💼 Experience</h2>
+    <!-- Education -->
+    <div class="education-card">
+        <h3>Bachelor of Science in Computer Engineering</h3>
+        <p><strong>University of Manitoba</strong></p>
+        <p>Expected Graduation: <strong>May 2025</strong></p>
+    </div>
 
+    <!-- Certifications -->
+    <div class="certifications">
+        <h3>📜 Licenses &amp; Certifications</h3>
+
+        <div class="cert-card">
+            <h4>Full-Stack JavaScript Development: MongoDB, Node, and React</h4>
+            <p><strong>Issued:</strong> 2025</p>
+            <a href="https://www.linkedin.com/learning/certificates/54efee17e545d5e7d636b9e09d7e1b2380877ccf0b4e994451d6ee34e840eda6" class="btn" target="_blank">📄 View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Foundations of User Experience (UX) Design</h4>
+            <p><strong>Issued:</strong> 2024</p>
+            <a href="https://www.coursera.org/account/accomplishments/records/KHG3GP662SPW" class="btn" target="_blank">📄 View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Tech Stewardship Practice Program</h4>
+            <p><strong>Issued:</strong> 2023</p>
+            <a href="https://credentials.techstewardship.com/en/verify/63355401386165" class="btn" target="_blank">📄 View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Project Management Foundations</h4>
+            <p><strong>Issued:</strong> 2024</p>
+            <a href="https://www.linkedin.com/learning/certificates/401234cb43a4637bc3e394e19669edadbbbb7a60cd613f6465099965172656f0?trk=share_certificate" class="btn" target="_blank">📄 View Certificate</a>
+        </div>
+
+        <div class="cert-card">
+            <h4>Microsoft Project 2016 Essential Training</h4>
+            <p><strong>Issued:</strong> 2024</p>
+            <a href="https://www.linkedin.com/learning/certificates/e90faebc5f2de938f6cdd400a8d3957b7c2a3db13dde779c83dbd9acf366a174" class="btn" target="_blank">📄 View Certificate</a>
+        </div>
+    </div>
+</section>
+
+<h2 id="--experience"><a id="experience"></a> 💼 Experience</h2>
 <div class="timeline-container">
 
     <div class="timeline-item">
@@ -309,10 +370,7 @@
 
 </div>
 
-<hr />
-
-<h2 id="-projects">📂 Projects</h2>
-
+<h2 id="--projects"><a id="projects"></a> 📂 Projects</h2>
 <div class="projects-section">
 
     <div class="project-card">
@@ -410,15 +468,10 @@
     </div> 
 </div>
 
-<hr />
+<h2 id="--resume"><a id="resume"></a> 📄 Resume</h2>
+<p>💼 <strong><a href="Sukhmeet_Singh_Hora_Resume.pdf" target="_blank">View</a></strong></p>
 
-<h2 id="-resume">📄 Resume</h2>
-
-<p>💼 <strong><a href="/Sukhmeet_Singh_Hora_Resume.pdf" target="_blank">View</a></strong></p>
-
-<hr />
-
-<h2 id="-click--reveal-game">🎮 Click &amp; Reveal Game</h2>
+<h2 id="--click--reveal-game"><a id="game"></a> 🎮 Click &amp; Reveal Game</h2>
 <p>Click on a card to learn something about me!</p>
 
 <div class="game-container">
@@ -547,13 +600,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<hr />
-
-<h2 id="-contact">📞 Contact</h2>
-
+<h2 id="--contact"><a id="contact"></a> 📞 Contact</h2>
 <p>📧 <a href="mailto:horass@myumanitoba.ca">horass@myumanitoba.ca</a><br />
 📱 +1 (431) 388-7835</p>
-
 
 
 
