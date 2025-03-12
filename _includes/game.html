@@ -1,5 +1,7 @@
 Click on a card to learn something about me!  
 
+<div id="facts-data" data-facts='{{ site.click_reveal_facts | jsonify }}' ></div>
+
 <div class="game-container">
     <div class="box" onclick="revealFact(this)">Tap to Reveal</div>
     <div class="box" onclick="revealFact(this)">Tap to Reveal</div>
@@ -71,55 +73,117 @@ Click on a card to learn something about me!
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     let facts = [
-        "💻 Experienced in Full-Stack Devlopment!",
-        "🔬 Built IoT depth monitoring system.",
+        "💻 Experienced in Full-Stack Development!",
+        "🔬 Designed IoT real time depth monitoring system.",
+        "🛠️ Experienced working with Raspberry Pi4 for IoT projects",
         "🌍 Love solving real-world problems.",
         "🎨 Created cross-platform PLC app.",
         "🚀 Built automated Excel templates using VBA and Power BI!",
         "📊 Automated Data visualization is my forte!",
-        "🤖 Integrated Raspberry Pi with AWS IoT and BLE",
+        "🤖 Integrated Raspberry Pi with AWS IoT and BLE.",
         "📡 Skilled in MQTT, AWS, and PLCs.",
         "🛠️ Automated BoM management system.",
         "⚡ Developed capacity planning automation.",
         "📈 Streamlined projects with Gantt charts.",
         "🖥️ Built SharePoint tracking system.",
         "📜 Certified in Full-Stack & UX!",
-        "📜 Certified in TSPP and Project Management Fundamentals",
+        "📜 Certified in TSPP and Project Management Fundamentals.",
         "🕹️ Programmed FPGA boards with Verilog.",
         "🔗 Strong in APIs and CI/CD.",
         "🚦 Designed Urban Tech online store.",
         "🛠️ Optimized AutoCAD with LISP.",
         "🔍 Debugging & problem-solving expert!",
-        "🎤 Great at technical presentations!"
+        "🎤 Great at technical presentations!",
+        "🛠️ Engineered real-time data monitoring tools.",
+        "⚙️ Developed a machine learning model for hazard detection.",
+        "📌 Automated project tracking with Power Query.",
+        "🧠 Passionate about AI and automation.",
+        "🚀 Built a job portal with a recommendation engine.",
+        "🔄 Implemented regression and load testing for web apps.",
+        "📊 Created Power BI dashboards for real-time analysis.",
+        "🖧 Worked with CAN protocol and J1939 for vehicle networks.",
+        "📡 Connected industrial PLCs with cloud services.",
+        "⏱️ Built an FPGA-based stopwatch system.",
+        "💡 Designed an LED-based assistive device for deaf curlers.",
+        "📲 Developed a smartphone app for remote PLC control.",
+        "📂 Automated document workflows with Macros.",
+        "🖥️ Built cloud-integrated database systems.",
+        "🎯 Strong analytical and critical thinking skills.",
+        "⚡ Experience with low-power embedded systems.",
+        "🛠️ Developed a smart sensor system for automation.",
+        "🔧 Skilled in debugging hardware and software issues.",
+        "🗂️ Lead and managed engineering projects.",
+        "🚀 Passionate about emerging technologies!"
     ];
-
     let usedFacts = [];
 
     window.revealFact = function (box) {
-        if (box.innerHTML !== "Tap to Reveal") return; // Don't reveal again
+        if (box.innerHTML !== "Tap to Reveal") return;
 
         if (facts.length === 0) {
-            resetGame(); // Auto-reset if all facts are used
+            resetGame();
             return;
         }
 
         const randomIndex = Math.floor(Math.random() * facts.length);
-        const selectedFact = facts.splice(randomIndex, 1)[0]; // Remove fact from available list
-        usedFacts.push(selectedFact); // Store in used list
+        const selectedFact = facts.splice(randomIndex, 1)[0];
+        usedFacts.push(selectedFact);
 
         box.innerHTML = selectedFact;
-        box.style.backgroundColor = "#28a745"; // Green after reveal
+        box.style.backgroundColor = "#28a745";
         box.style.color = "white";
         box.classList.add("fade-in");
     };
 
     window.resetGame = function () {
-        facts = [...usedFacts]; // Restore facts from used list
+        facts = [
+            "💻 Experienced in Full-Stack Development!",
+            "🔬 Designed IoT real time depth monitoring system.",
+            "🛠️ Experienced working with Raspberry Pi4 for IoT projects",
+            "🌍 Love solving real-world problems.",
+            "🎨 Developed cross-platform apps using flutter and React.",
+            "🚀 Built automated Excel templates using VBA and Power BI!",
+            "📊 Automated Data visualization is my forte!",
+            "🤖 Integrated Raspberry Pi with AWS IoT and BLE.",
+            "📡 Skilled in MQTT, AWS, and PLCs.",
+            "🛠️ Automated BoM management system.",
+            "⚡ Developed capacity planning automation.",
+            "📈 Streamlined projects with Gantt charts.",
+            "🖥️ Built SharePoint tracking system.",
+            "📜 Certified in Full-Stack & UX/UI Design!",
+            "📜 Certified in TSPP and Project Management Fundamentals.",
+            "🕹️ Programmed FPGA boards with Verilog.",
+            "🔗 Strong in APIs and CI/CD.",
+            "🚦 Designed Urban Tech online store.",
+            "🛠️ Optimized AutoCAD with LISP.",
+            "🔍 Debugging & problem-solving expert!",
+            "🎤 Great at technical presentations!",
+            "🛠️ Engineered real-time data monitoring tools.",
+            "⚙️ Developed a machine learning model for hazard detection.",
+            "📌 Automated project tracking with Power Query.",
+            "🧠 Passionate about AI and automation.",
+            "🚀 Built a job portal with a recommendation engine.",
+            "🔄 Implemented regression and load testing for web apps.",
+            "📊 Created Power BI dashboards for real-time analysis.",
+            "🖧 Worked with CAN protocol and J1939 for vehicle networks.",
+            "📡 Connected industrial PLCs with cloud services.",
+            "⏱️ Built an FPGA-based stopwatch system.",
+            "💡 Designed an LED-based assistive device for deaf curlers.",
+            "📲 Developed a smartphone app for remote PLC control.",
+            "📂 Automated document workflows with Macros.",
+            "🖥️ Built cloud-integrated database systems.",
+            "🎯 Strong analytical and critical thinking skills.",
+            "⚡ Experience with low-power embedded systems.",
+            "🛠️ Developed a smart sensor system for automation.",
+            "🔧 Skilled in debugging hardware and software issues.",
+            "🗂️ Lead and managed engineering projects.",
+            "🚀 Passionate about emerging technologies!"
+        ];
         usedFacts = [];
 
         document.querySelectorAll(".box").forEach((box) => {
             box.innerHTML = "Tap to Reveal";
-            box.style.backgroundColor = "#007BFF"; // Reset color
+            box.style.backgroundColor = "#007BFF";
             box.classList.remove("fade-in");
         });
     };
